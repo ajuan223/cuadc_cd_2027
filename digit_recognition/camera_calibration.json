@@ -1,0 +1,21 @@
+{
+  "camera": "Raspberry Pi Camera Module 3 standard / Sony IMX708",
+  "model_name": "fixed-infinity calibrated K, zero distortion",
+  "image_width": 2304,
+  "image_height": 1296,
+  "camera_matrix": [
+    [1607.2175426079257, 0.0, 1151.6981002780565],
+    [0.0, 1602.1620180631555, 631.8629738578976],
+    [0.0, 0.0, 1.0]
+  ],
+  "distortion": [0.0, 0.0, 0.0, 0.0, 0.0],
+  "selection": {
+    "calibration_fit_views": 19,
+    "not_used_for_fit_views": 17,
+    "calibrated_zero_distortion_fit_rmse_px": 2.701,
+    "nominal_zero_distortion_fit_rmse_px": 2.834,
+    "calibrated_zero_distortion_unfitted_rmse_px": 3.946,
+    "nominal_zero_distortion_unfitted_rmse_px": 4.109,
+    "reason": "Measured K fit the available views better; unstable high-order distortion was disabled for safe full-frame rays."
+  }
+}

@@ -1,0 +1,22 @@
+[Unit]
+Description=CUADC offline vision and localization
+After=local-fs.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=@RUN_USER@
+Group=@RUN_GROUP@
+SupplementaryGroups=video dialout
+WorkingDirectory=@PROJECT_DIR@
+EnvironmentFile=-/etc/default/cuadc-vision
+Environment=PYTHONUNBUFFERED=1
+ExecStart=@PROJECT_DIR@/run_selected_task.sh
+Restart=on-failure
+RestartSec=3
+KillSignal=SIGINT
+TimeoutStopSec=20
+UMask=0022
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,6 @@
+# Training and local inference dependencies for part.pt and best.pt.
+# part.pt was saved with Ultralytics 8.4.41.
+ultralytics==8.4.41
+torchvision>=0.24
+Pillow>=10
+
