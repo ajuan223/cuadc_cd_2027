@@ -40,3 +40,8 @@ datasets/
 captures/
 videos/
 recordings/
+
+# Local Python and generated step artifacts
+.uv-cache/
+.uv-python/
+artifacts/
