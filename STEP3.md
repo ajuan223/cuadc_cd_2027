@@ -20,13 +20,13 @@
 ## 安装依赖
 
 ```powershell
-.\.venv\Scripts\python.exe -m pip install -r requirements-step3.txt
+uv sync
 ```
 
 ## 运行
 
 ```powershell
-.\.venv\Scripts\python.exe tools\step3_recognize_digit.py
+uv run python tools\step3_recognize_digit.py
 ```
 
 默认使用：
@@ -40,7 +40,7 @@ testdata/digit_17_frame.jpg
 指定其他图片：
 
 ```powershell
-.\.venv\Scripts\python.exe tools\step3_recognize_digit.py --image path\to\image.jpg
+uv run python tools\step3_recognize_digit.py --image path\to\image.jpg
 ```
 
 ## 输出

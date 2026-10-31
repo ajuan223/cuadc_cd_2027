@@ -18,20 +18,19 @@
 在仓库根目录运行：
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-step1.txt
+uv sync
 ```
 
 ## 运行
 
 ```powershell
-.\.venv\Scripts\python.exe tools\step1_detect_image.py
+uv run python tools\step1_detect_image.py
 ```
 
 也可以指定自己的图片：
 
 ```powershell
-.\.venv\Scripts\python.exe tools\step1_detect_image.py --image path\to\image.jpg
+uv run python tools\step1_detect_image.py --image path\to\image.jpg
 ```
 
 ## 查看结果
@@ -51,7 +50,7 @@ output=...\artifacts\step1_detected.jpg
 提高置信度阈值：
 
 ```powershell
-.\.venv\Scripts\python.exe tools\step1_detect_image.py --confidence 0.7
+uv run python tools\step1_detect_image.py --confidence 0.7
 ```
 
 置信度阈值越高，模型越严格，通常会减少误检，但也可能漏掉目标。

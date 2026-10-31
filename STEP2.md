@@ -29,13 +29,13 @@ crop = image[y1:y2, x1:x2].copy()
 ## 运行
 
 ```powershell
-.\.venv\Scripts\python.exe tools\step2_crop_target.py
+uv run python tools\step2_crop_target.py
 ```
 
 指定其他图片：
 
 ```powershell
-.\.venv\Scripts\python.exe tools\step2_crop_target.py --image path\to\image.jpg
+uv run python tools\step2_crop_target.py --image path\to\image.jpg
 ```
 
 ## 输出
