@@ -61,3 +61,14 @@ uv lock
 ```
 
 不要在项目中手工维护多份 requirements 文件；运行依赖统一记录在 `pyproject.toml`，精确版本记录在 `uv.lock`。
+## 实时视频流输入
+
+生产输入统一由 `get_photo.py` 提供：
+
+- 唯一生产视频源为 IMX708 + Picamera2；
+- 帧只保存在内存缓冲区中；
+- 处理不过来时覆盖旧帧，不排队、不落盘；
+- 不在本地保存抽帧、检测裁剪图或识别面板图；
+- `frame_stride` 只控制内存中的采样频率。
+
+`legacy/get_photo_extract_frames.py` 是交接时的旧抽帧脚本，会保存 JPG，不属于生产流程。
