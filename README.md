@@ -34,6 +34,12 @@ uv run python tools/step3_recognize_digit.py
 
 更详细的原理和结果见 `STEP1.md`、`STEP2.md` 和 `STEP3.md`。
 
+## 运行第四步：图案识别
+
+```powershell
+uv run python tools/step4_recognize_pattern.py
+```
+
 ## 依赖管理
 
 安装新的运行依赖：
